@@ -12,7 +12,7 @@ class Auto(models.Model):
     disponible = models.BooleanField(default=True)
 
     def __str__(self):
-        return f"{self.marca} {self.modelo} {{self.year}}"
+        return f"{self.marca} {self.modelo} {self.year}"
 
 
 # Create your models here.

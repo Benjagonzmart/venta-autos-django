@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Listado de Autos</title>
+    </head>
+    <body>
+        <h1>Autos en venta</h1>
+
+        <ul>
+            {% for auto in autos %}
+                <li>
+                    <a href="/autos/{{ auto.id }}/">
+                        {{ auto.marca }} {{ auto.modelo }}
+                    </a>
+                    {{ auto.marca }} {{ auto.modelo }} -
+                    {{ auto.year }} -
+                    {{ auto.kilometraje }} km -
+                    ${{ auto.precio }}
+                </li>
+            {% empty %}
+                <li>No hay autos disponibles</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
