@@ -19,6 +19,9 @@
             {% empty %}
                 <li>No hay autos disponibles</li>
             {% endfor %}
+            {% if auto.imagen %}
+                <img src="{{ auto.imagen.url }}" width="150">
+            {% endif %}
         </ul>
     </body>
 </html>

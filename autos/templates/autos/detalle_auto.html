@@ -6,10 +6,12 @@
         <h1>{{ auto.marca }} {{ auto.modelo }}</h1>
 
         <p>Año: {{ auto.year }}</p>
-        <p>Puertas: {{ auto.puertas }}</p>
+        <p>Body: {{ auto.body }}</p>
         <p>Kilometraje: {{ auto.kilometraje }} km</p>
         <p>Precio: ${{ auto.precio }}</p>
-
+        {% if auto.imagen %}
+            <img src="{{ auto.imagen.url }}" width="300">
+        {% endif %}
         <a href="/autos/">Volver</a>
     </body>
 </html>
